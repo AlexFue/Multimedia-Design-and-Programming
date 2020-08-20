@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+		<h1>Pictures</h1>
+		{% for item in image %}
+			<ul>
+				<a href = "{{url_for('picture', url = item['id'])}}">{{item['title']}}</a>
+			</ul>
+			<ul>
+				<a href="{{url_for('picture', url = item['id'])}}"><img src="{{url_for('static', filename = item['id'])}}" width="200" class="img-responsive img-rounded" alt=""></a>
+			</ul>
+		{% endfor %}
+{% endblock %}
+	
+

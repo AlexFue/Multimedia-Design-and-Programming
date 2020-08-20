@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<body> 
+		<ul>"{{image['title']}}" by {{image['flickr_user']}}</ul>
+		<ul> 
+			<img src="{{url_for('static', filename = image['id'])}}">
+		</ul>
+		<ul>{{mode}} image in {{format}} with width {{width}} and height {{height}}.</ul>
+		<ul>
+			<a href="{{url_for('home')}}">Back to list of images</a>
+		</ul>
+	</body>
+</html>
+
+
